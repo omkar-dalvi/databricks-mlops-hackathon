@@ -21,4 +21,11 @@ databricks auth token --host https://adb-1970734542744217.17.azuredatabricks.net
 4. YAML file configuration
 https://docs.databricks.com/aws/en/dev-tools/bundles/settings#specification
 
+5. Create a DAB using pre-defined templated.
+databricks bundle init
 
+6. Validate the bundle.
+databricks bundle validate
+
+7. Deploy the bundle to dev env.
+databricks bundle deploy --target dev
