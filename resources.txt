@@ -2,6 +2,23 @@ Data ingestion from ADLS to databricks
 https://docs.databricks.com/en/connect/storage/azure-storage.html#language-SAS%C2%A0tokens
 https://databricks-sdk-py.readthedocs.io/en/latest/workspace/workspace/secrets.html
 
+===========================================================================================
 
+DATABRICKS ASSET BUNDLES (DABs)
+1. Installing Databricks-cli: It should be greater than 0.18.0, hence downlaod appropriate zip version and place it in your env. If `pip install` used, it will isntall 0.18.0 version, which cannot be used for DABs.
+https://github.com/databricks/cli/releases
+
+2. Login using U2M (user-to-machine). Using this, your profile is created on your local. This is an user-interactive based authentication mechanism. One can also use M2M (Machine-to-Machine) based authentication. In M2M, service principal based authentication can be leveraged.
+databricks auth login --host https://adb-1970734542744217.17.azuredatabricks.net
+
+3. Databricks CLI profile-related commands -- exploratory purposes.
+databricks auth profiles
+databricks auth env --profile adb-1970734542744217
+databricks auth token --host https://adb-1970734542744217.17.azuredatabricks.net
+databricks auth token -p adb-1970734542744217
+databricks auth token --host https://adb-1970734542744217.17.azuredatabricks.net -p adb-1970734542744217
+
+4. YAML file configuration
+https://docs.databricks.com/aws/en/dev-tools/bundles/settings#specification
 
 
