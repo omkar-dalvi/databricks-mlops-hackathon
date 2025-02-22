@@ -29,3 +29,8 @@ databricks bundle validate
 
 7. Deploy the bundle to dev env.
 databricks bundle deploy --target dev
+
+8. Bundle examples
+https://github.com/databricks/bundle-examples
+MLOPS template
+https://github.com/databricks/bundle-examples/tree/main/mlops_stacks
